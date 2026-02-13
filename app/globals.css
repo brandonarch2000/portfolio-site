@@ -1,26 +1,75 @@
-@import "tailwindcss";
-
+/* app/globals.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --autumn-orange: #D2691E;
+  --forest-green: #228B22;
+  --earth-brown: #A0522D;
+  --golden-yellow: #DAA520;
+  --neutral-beige: #F5F5DC;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--neutral-beige);
+  color: var(--earth-brown);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--forest-green);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header nav a {
+  color: var(--neutral-beige);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  background-color: var(--autumn-orange);
+  color: var(--neutral-beige);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid var(--golden-yellow);
+  border-radius: 8px;
+}
+
+h1, h2, h3 {
+  color: var(--forest-green);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.footer {
+  background-color: var(--earth-brown);
+  color: var(--neutral-beige);
+  text-align: center;
+  padding: 1rem;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
